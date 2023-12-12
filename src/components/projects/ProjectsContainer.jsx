@@ -4,10 +4,10 @@
 
 //Importing Projects
 
-import Project1 from "./UI/Project1";
-import Project2 from "./UI/Project2";
-import Project3 from "./UI/Project3";
-import Project4 from "./UI/Project4";
+import Project1 from "./ui/Project1";
+import Project2 from "./ui/Project2";
+import Project3 from "./ui/Project3";
+import Project4 from "./ui/Project4";
 // import Swiper core and required modules
 
 import {
