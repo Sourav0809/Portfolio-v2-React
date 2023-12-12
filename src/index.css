@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* CUSTOMISING SWIPPER JS ARROWS  */
+:root {
+
+    --swiper-navigation-size: 12px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white !important;
+    background-color: rgb(244, 240, 240) !important;
+    right: .2rem !important;
+    padding: 1rem !important;
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
+    top: var(--swiper-navigation-top-offset, 72%) !important;
+
+}
+
+.swiper-scrollbar-horizontal {
+    top: .2rem !important;
+    background-color: white !important;
+}
