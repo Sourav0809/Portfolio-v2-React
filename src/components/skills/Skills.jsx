@@ -157,8 +157,8 @@ const Skills = () => {
         <div className=" w-[30rem] h-[32rem] md:w-[32rem] md:h-[32rem] pt-10 md:pt-0 rounded-[50%]">
           {/* <div className=" bg-blue-600 w-[35rem] h-[35rem] absolute rounded-[50%] z-10"></div> */}
           <img
-            src="https://img.freepik.com/free-vector/businessman-working-flying-like-superhero-with-briefcase-start-up-launch-start-up-venture-entrepreneurship-concept_335657-157.jpg?w=1380&t=st=1702018199~exp=1702018799~hmac=af56c3e53dbba92f49592ba305af326cbe3a6f8ac05df86f07d6f00a169dd24f"
-            className=" w-full h-full  object-cover rounded-[50%] relative top-4 skills-child-container right-4  z-20"
+            src="./hand code img.png"
+            className=" w-full h-full rounded-2xl  object-cover bg-blue-950 relative top-4 skills-child-container right-4  z-20"
           />
         </div>
       </div>
