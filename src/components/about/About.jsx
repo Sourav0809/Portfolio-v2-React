@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MdEmail } from "react-icons/md";
+import gsap from "gsap";
+
 const About = () => {
+  useEffect(() => {
+    gsap.from(".about_me_container", {
+      scrollTrigger: {
+        trigger: ".about_me_container",
+        start: "top 80%",
+        end: "bottom 20%",
+      },
+      x: 400,
+      duration: 2,
+      opacity: 0,
+    });
+  }, []);
+
   return (
     <div className=" min-[1400px]:w-[1400px] w-[90%] m-auto mt-[15rem] pt-2 md:pt-[15rem] pb-[15rem]  font-custom ">
       <h1 className=" border-l-8 border-white p-2  text-3xl" id="contact">
@@ -17,7 +32,7 @@ const About = () => {
           </div>
           <div className=" w-[30rem] h-[20rem] bg-blue-700 absolute z-20 bottom-4 left-4 rounded-md"></div>
         </div>
-        <div className=" flex flex-col gap-4 justify-center ">
+        <div className=" flex flex-col gap-4 justify-center about_me_container ">
           <h1 className=" text-3xl">Who Am I ?</h1>
           <p className="text-lg">
             I'm a seasoned Frontend Developer with experience in a variety of

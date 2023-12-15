@@ -53,18 +53,6 @@ const Skills = () => {
       duration: 2,
       opacity: 0,
     });
-
-    gsap.to(".skills-child-container", {
-      // scrollTrigger: {
-      //   trigger: ".skills-child-container",
-      //   start: "top 80%",
-      //   end: "bottom 20%",
-      // },
-      y: 60,
-      duration: 1,
-      repeat: -1,
-      yoyo: true,
-    });
   }, []);
 
   return (
