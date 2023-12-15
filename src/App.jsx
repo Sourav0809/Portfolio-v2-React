@@ -7,7 +7,7 @@ import Skills from "./components/skills/Skills";
 import ProjectsContainer from "./components/projects/ProjectsContainer";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
@@ -16,6 +16,7 @@ function App() {
         <HeroSection />
         <About />
         <Skills />
+        <Toaster />
         <ProjectsContainer />
         <Contact />
         <Footer />

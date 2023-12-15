@@ -27,7 +27,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className=" min-[1400px]:w-[1400px] w-[90%] m-auto mt-28 flex flex-col min-[500px]:flex-row justify-center items-center gap-32 ">
+    <div
+      className=" min-[1400px]:w-[1400px] w-[90%] m-auto mt-28 flex flex-col min-[500px]:flex-row justify-center items-center gap-32"
+      id="hero"
+    >
       <div className=" flex justify-center items-center relative hero-child-1 w-full min-[500px]:w-[50%] ">
         <div className=" w-[20rem] h-[20rem] min-[500px]:  md:w-[30rem] md:h-[30rem] rounded-[50%] bg-[rgb(42,21,76)] shadow-xl shadow-white rotate-180"></div>
         <div className=" w-[20rem] h-[20rem] md:w-[30rem] md:h-[30rem]  rounded-[50%] bg-transparent shadow-xl  absolute top-5 left-1 md:left-5 bg-blue-950  ">

@@ -1,8 +1,8 @@
-import gsap from "gsap";
 import React, { useEffect, useState } from "react";
 import { MdOutlineCodeOff } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCrossCircled } from "react-icons/rx";
+import { Link, animateScroll as scroll } from "react-scroll";
 const Header = () => {
   const [openHamburger, setOpenHamburger] = useState(false);
 
@@ -35,7 +35,7 @@ const Header = () => {
         </h1>
       </div>
       <div
-        className={`md:hidden`}
+        className={`min-[850px]:hidden`}
         onClick={() => {
           setOpenHamburger((prev) => !prev);
         }}
@@ -49,17 +49,87 @@ const Header = () => {
       <div
         className={`${
           openHamburger
-            ? " flex flex-col gap-2 bg-blue-950 absolute right-0 top-0 pr-5 pt-24 h-screen w-[45%] hamburger-container  "
+            ? " flex flex-col gap-2 bg-blue-950 absolute right-0 top-0 pr-5 pt-24 h-screen w-[45%]"
             : "hidden "
-        } md:flex ${
+        } min-[850px]:flex ${
           openHamburger ? "justify-start" : "justify-center"
         } items-center gap-8 text-2xl `}
       >
-        <h1 className=" cursor-pointer hover:text-green-500">Home</h1>
-        <h1 className=" cursor-pointer hover:text-green-500">About</h1>
-        <h1 className=" cursor-pointer hover:text-green-500">Skills</h1>
-        <h1 className=" cursor-pointer hover:text-green-500">Projects</h1>
-        <h1 className=" cursor-pointer hover:text-green-500">Contact Me</h1>
+        <h1 className=" cursor-pointer hover:text-green-500">
+          <Link
+            activeClass="active"
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1500}
+            onClick={() => {
+              setOpenHamburger(false);
+            }}
+          >
+            Home
+          </Link>
+        </h1>
+        <h1 className=" cursor-pointer hover:text-green-500">
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={1500}
+            onClick={() => {
+              setOpenHamburger(false);
+            }}
+          >
+            About
+          </Link>
+        </h1>
+        <h1 className=" cursor-pointer hover:text-green-500">
+          <Link
+            activeClass="active"
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={1500}
+            onClick={() => {
+              setOpenHamburger(false);
+            }}
+          >
+            Skills
+          </Link>
+        </h1>
+        <h1 className=" cursor-pointer hover:text-green-500">
+          <Link
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={1500}
+            onClick={() => {
+              setOpenHamburger(false);
+            }}
+          >
+            Projects
+          </Link>
+        </h1>
+        <h1 className=" cursor-pointer hover:text-green-500">
+          <Link
+            activeClass="active"
+            to="contact-me-section"
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={1500}
+            onClick={() => {
+              setOpenHamburger(false);
+            }}
+          >
+            Contact Me
+          </Link>
+        </h1>
       </div>
     </header>
   );

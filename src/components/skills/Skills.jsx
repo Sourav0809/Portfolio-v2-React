@@ -56,7 +56,10 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className=" min-[1400px]:w-[1400px] w-[90%] m-auto mt-5 md:mt-[15rem] pb-[15rem] overflow-hidden  font-custom">
+    <div
+      className=" min-[1400px]:w-[1400px] w-[90%] m-auto mt-5 md:mt-[15rem] pb-[15rem] overflow-hidden  font-custom"
+      id="skills"
+    >
       <h1 className=" border-l-8 border-white p-2  text-3xl" id="contact">
         <span className=" pl-4">My Skills </span>
       </h1>

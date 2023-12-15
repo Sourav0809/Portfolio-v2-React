@@ -1,19 +1,60 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { RiLoader3Line } from "react-icons/ri";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 const Contact = () => {
   //hook assignment
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
-  const [subject, setSubject] = useState("");
+  const form = useRef();
+  const senderName = useRef();
+  const senderEmail = useRef();
+  const senderPhone = useRef();
+  const senderMessage = useRef();
   const [loader, setLoader] = useState(false);
 
+  // when user submit the form
+  const formSubmitedHandeler = (e) => {
+    e.preventDefault();
+
+    // making the loader true
+    setLoader(true);
+
+    // now sending the email via email js
+    emailjs
+      .sendForm(
+        "service_gsgxmj9",
+        "template_w2swqqi",
+        form.current,
+        "3Mzt3gdmhHW-Bne81"
+      )
+      .then(
+        (result) => {
+          toast.success("Message sent ");
+          setLoader(false);
+        },
+        (error) => {
+          toast.error("Some error !! ");
+        }
+      )
+      .catch(() => {
+        toast.error("Some error ");
+        setLoader(false);
+      });
+
+    senderName.current.value = "";
+    senderEmail.current.value = "";
+    senderPhone.current.value = "";
+    senderMessage.current.value = "";
+  };
+
   return (
-    <div className=" min-[1400px]:w-[1400px] w-[90%] m-auto pt-[5rem]  md:pt-[15rem] pb-[5rem]   font-custom snap-start">
+    <div className=" min-[1400px]:w-[1400px] w-[90%] m-auto pt-[5rem] md:pt-[15rem] pb-[5rem] font-custom">
       <h1 className=" border-l-8 border-white p-2  text-3xl" id="contact">
         Contact Me
       </h1>
-      <div className=" flex flex-col mt-10  min-[650px]:flex-row gap-8">
+      <div
+        className=" flex flex-col mt-10  min-[650px]:flex-row gap-8"
+        id="contact-me-section"
+      >
         {/* FOR IMAGE  */}
 
         <div className=" w-[90%] min-[650px]:w-[45%] mt-5 relative">
@@ -27,7 +68,11 @@ const Contact = () => {
         {/* TEXT DIV HERE  */}
 
         <div className=" w-full min-[650px]:w-[55%] rounded-lg flex flex-col gap-2 md:gap-6 p-2 min-[650px]:px-10">
-          <form className=" flex flex-col gap-2">
+          <form
+            ref={form}
+            className=" flex flex-col gap-2"
+            onSubmit={formSubmitedHandeler}
+          >
             <div>
               <label htmlFor="name" className=" text-xl px-1 font-medium">
                 Name
@@ -36,11 +81,9 @@ const Contact = () => {
                 className="w-full bg-blue-100 py-2 px-5 mt-1 rounded-md text-xl text-black "
                 type="text"
                 placeholder="Enter Your Name ..."
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
                 required
-                value={name}
+                name="user_name"
+                ref={senderName}
               />
             </div>
             <div>
@@ -51,11 +94,9 @@ const Contact = () => {
                 className="w-full bg-blue-100 py-2 px-5 mt-1 rounded-md text-xl text-black"
                 type="email"
                 placeholder="Enter Your Email ..."
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
+                name="user_email"
                 required
-                value={email}
+                ref={senderEmail}
               />
             </div>
             <div>
@@ -65,12 +106,10 @@ const Contact = () => {
               <input
                 className="w-full bg-blue-100 py-2 px-5  mt-1 rounded-md text-xl text-black "
                 type="number"
+                name="user_phone"
                 placeholder="Your Phone Number ..."
-                onChange={(e) => {
-                  setNumber(e.target.value);
-                }}
+                ref={senderPhone}
                 required
-                value={number}
               />
             </div>
             <div>
@@ -80,16 +119,18 @@ const Contact = () => {
               <textarea
                 className="w-full h-32 bg-blue-100 py-2 px-5 mt-1 rounded-md text-xl resize-none  text-black"
                 type="text"
+                name="message"
+                ref={senderMessage}
                 placeholder="Some Message Here ..."
-                onChange={(e) => {
-                  setSubject(e.target.value);
-                }}
                 required
-                value={subject}
               />
             </div>
             {!loader ? (
-              <button className=" bg-blue-600 px-4 py-2 w-fit rounded-md">
+              <button
+                type="submit"
+                value="send"
+                className=" bg-blue-600 px-4 py-2 w-fit rounded-md"
+              >
                 Send Message
               </button>
             ) : (

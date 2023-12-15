@@ -28,7 +28,10 @@ import "swiper/css/scrollbar";
 const ProjectsContainer = () => {
   return (
     <>
-      <div className=" w-full px-5 pb-20 min-[650px]:pb-2 overflow-hidden">
+      <div
+        className=" w-full px-5 pb-20 min-[650px]:pb-2 overflow-hidden"
+        id="projects"
+      >
         <div className=" min-[1200px]:w-[1200px] w-[90%] m-auto   font-custom font-medium">
           <div className=" pb-10 ">
             <h1 className=" border-l-8 border-white p-5 text-3xl">

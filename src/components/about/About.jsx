@@ -17,7 +17,10 @@ const About = () => {
   }, []);
 
   return (
-    <div className=" min-[1400px]:w-[1400px] w-[90%] m-auto mt-[15rem] pt-2 md:pt-[15rem] pb-[15rem]  font-custom ">
+    <div
+      className=" min-[1400px]:w-[1400px] w-[90%] m-auto mt-[15rem] pt-2 md:pt-[15rem] pb-[15rem]  font-custom "
+      id="about"
+    >
       <h1 className=" border-l-8 border-white p-2  text-3xl" id="contact">
         <span className=" pl-4">About Me </span>
       </h1>
