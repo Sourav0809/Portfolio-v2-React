@@ -51,7 +51,7 @@ const HeroSection = () => {
         </div>
         <div className=" flex text-xl gap-4">
           <a
-            href="https://drive.google.com/file/d/10C3hF8szGM942lIR1OeYrITpnbeCWENB/view?usp=sharing"
+            href="https://drive.google.com/file/d/1wrvJ4eyCuAl5Jp35aDLj9f2RBSGk5gwT/view?usp=sharing"
             className=" bg-blue-700 px-5 py-2 rounded-md flex justify-center items-center gap-2 w-fit"
           >
             <FiDownload />
