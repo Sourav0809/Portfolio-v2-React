@@ -29,7 +29,7 @@ const About = () => {
         <div className=" flex relative ">
           <div className=" w-[30rem] h-[20rem] ">
             <img
-              src="public/profile4.jpg"
+              src="/profile4.jpg"
               className=" w-full h-full object-cover rounded-md relative z-30"
             />
           </div>
