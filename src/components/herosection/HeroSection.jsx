@@ -6,8 +6,8 @@ import { PiInstagramLogoBold } from "react-icons/pi";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { useEffect } from "react";
-
 import gsap from "gsap";
+
 const HeroSection = () => {
   useEffect(() => {
     let tl = gsap.timeline();
