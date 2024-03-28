@@ -46,12 +46,13 @@ const HeroSection = () => {
           <h1 className=" text-6xl">I'm Sourav Pathak.</h1>
         </div>
         <div className=" text-2xl">
-          <h1>Currently crafting</h1>
-          <h1>Immersive Frontend Experiences.</h1>
+          <h1>A dedicated </h1>
+          <h1>Full Stack developer based in India.</h1>
         </div>
         <div className=" flex text-xl gap-4">
           <a
-            href="https://drive.google.com/file/d/1_0o8eHvAbJtGBjWCcta1MDyePM20SfMq/view"
+            href="https://drive.google.com/file/d/1t_XCjgr-yMdDmOJs2RAoxsvVv8WUOJYz/view?usp=sharing"
+            target="_blank"
             className=" bg-blue-700 px-5 py-2 rounded-md flex justify-center items-center gap-2 w-fit"
           >
             <FiDownload />
@@ -66,19 +67,25 @@ const HeroSection = () => {
           </a>
         </div>
         <div className=" flex justify-start items-center gap-5">
-          <a href="https://github.com/Sourav0809">
+          <a href="https://github.com/Sourav0809" target="_blank">
             <FaGithub className=" text-3xl  rounded-full cursor-pointer" />
           </a>
-          <a href="https://www.linkedin.com/in/sourav-pathak-360551282/">
+          <a
+            href="https://www.linkedin.com/in/sourav-pathak-360551282/"
+            target="_blank"
+          >
             <FaLinkedin className=" text-3xl  rounded-full cursor-pointer" />
           </a>
-          <a href="https://twitter.com/itssourav99">
+          <a href="https://twitter.com/itssourav99" target="_blank">
             <FaTwitter className=" text-3xl  rounded-full cursor-pointer" />
           </a>
-          <a href="https://www.facebook.com/sourav.souravpathak/">
+          <a
+            href="https://www.facebook.com/sourav.souravpathak/"
+            target="_blank"
+          >
             <FaSquareFacebook className=" text-3xl  rounded-full cursor-pointer" />
           </a>
-          <a href="https://www.instagram.com/itssourav99/">
+          <a href="https://www.instagram.com/itssourav99/" target="_blank">
             <PiInstagramLogoBold className=" text-3xl  rounded-full cursor-pointer" />
           </a>
         </div>

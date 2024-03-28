@@ -24,6 +24,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Project5 from "./ui/Project5";
 
 const ProjectsContainer = () => {
   return (
@@ -50,6 +51,9 @@ const ProjectsContainer = () => {
             //   autoplay={{ delay: 3000 }}
             //   autoplay={{ delay: 3000 }}
           >
+            <SwiperSlide>
+              <Project5 />
+            </SwiperSlide>
             <SwiperSlide>
               <Project1 />
             </SwiperSlide>

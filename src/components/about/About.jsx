@@ -38,14 +38,14 @@ const About = () => {
         <div className=" flex flex-col gap-4 justify-center about_me_container ">
           <h1 className=" text-3xl">Who Am I ?</h1>
           <p className="text-lg">
-            I'm a seasoned Frontend Developer with experience in a variety of
+            I'm a seasoned Full-Stack Developer with experience in a variety of
             projects, from e-commerce and social media to productivity tools and
             food ordering systems. I love creating websites and apps that not
             only work well but also look great and are easy to use. My expertise
             is in making user-friendly interfaces that people enjoy using.
           </p>
           <p className=" text-base  ">
-            #FrontendDeveloper #React #Responsive Design
+            #Full_Stack_Developer #React #Node #Express #Responsive Design
           </p>
           <button className=" bg-blue-700 px-5 py-2 rounded-md flex justify-center items-center gap-2 w-fit">
             <MdEmail />
