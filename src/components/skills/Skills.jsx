@@ -12,6 +12,11 @@ import { FaGithub } from "react-icons/fa";
 import { BsBootstrap, BsFiletypeScss } from "react-icons/bs";
 import { SiRedux } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaNodeJs } from "react-icons/fa";
+import { SiPostgresql } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+
 // importing gsap components
 import gsap from "gsap";
 import { Power2 } from "gsap";
@@ -89,6 +94,32 @@ const Skills = () => {
               <div className=" w-20 h-20 rounded-[50%] bg-yellow-400 absolute"></div>
               <div className=" text-6xl p-2 border border-white relative z-10 bg-blue-600 top-3 left-3 rounded-[50%]">
                 <FaReact />
+              </div>
+            </div>
+          </div>
+          <div className="w-full px-5 md:px-0 md:w-1/2  flex justify-center items-center  gap-10 skill-container-1">
+            <div className=" relative">
+              <div className=" w-20 h-20 rounded-[50%] bg-yellow-400 absolute"></div>
+              <div className=" text-6xl p-2 border border-white relative z-10 bg-blue-600 top-3 left-3 rounded-[50%]">
+                <TbBrandNextjs />
+              </div>
+            </div>
+            <div className=" relative">
+              <div className=" w-20 h-20 rounded-[50%] bg-yellow-400 absolute"></div>
+              <div className=" text-6xl p-2 border border-white relative z-10 bg-blue-600 top-3 left-3 rounded-[50%]">
+                <FaNodeJs />
+              </div>
+            </div>
+            <div className=" relative">
+              <div className=" w-20 h-20 rounded-[50%] bg-yellow-400 absolute"></div>
+              <div className=" text-6xl p-2 border border-white relative z-10 bg-blue-600 top-3 left-3 rounded-[50%]">
+                <SiPostgresql className=" rounded-xl" />
+              </div>
+            </div>
+            <div className=" relative">
+              <div className=" w-20 h-20 rounded-[50%] bg-yellow-400 absolute"></div>
+              <div className=" text-6xl p-2 border border-white relative z-10 bg-blue-600 top-3 left-3 rounded-[50%]">
+                <SiExpress />
               </div>
             </div>
           </div>
